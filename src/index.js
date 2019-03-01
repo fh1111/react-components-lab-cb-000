@@ -61,9 +61,13 @@ export class ButcherShop extends React.Component {
 
 export class App extends React.Component {
   render() {
+    const products = BUTCHER_PRODUCTS.map((p, idx) => (<li key={idx}>{p}</li>))
     return (
-      <div id="app">
-
+      <div className="butcher-shop">
+        <p>Hello! We have the following products for sale today:</p>
+        <ul>
+          { products }
+        </ul>
       </div>
     )
   }
